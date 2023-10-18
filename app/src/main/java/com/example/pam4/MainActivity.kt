@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -117,17 +118,27 @@ fun Keterangan(){
         .background(Color.Cyan))
     {
         Column(modifier = Modifier
-            .fillMaxSize()
+            .fillMaxWidth()
             .padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ){
-            Row (){
-                Text(text = "Humidity")
-
-
-
+            Row (modifier = Modifier .fillMaxWidth() .padding(10.dp), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
+                Text(text = "Humidity",
+                    fontSize = 18.sp,
+                    modifier = Modifier.padding(10.dp))
+                Text(text = "UV Index",
+                    fontSize = 18.sp,
+                    modifier = Modifier.padding(10.dp))
             }
-            Row(){
-
+            Row (modifier = Modifier .fillMaxWidth() .padding(10.dp), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
+                Text(text = "98%",
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(10.dp))
+                Text(text = "9 / 10",
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(10.dp))
             }
 
         }
